@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use Image;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+<<<<<<< HEAD
+=======
+use Illuminate\Support\Facades\File;
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
 use GuzzleHttp\Handler\Proxy;
 
 class ProfileController extends Controller
@@ -38,6 +42,7 @@ class ProfileController extends Controller
             'numero' => 'required',
             'adresse' => 'required',
             'photo' => 'mimes:png,jpg,jpeg,jfif',
+<<<<<<< HEAD
         ]);    
 
         // if(request('photo'))
@@ -62,6 +67,28 @@ class ProfileController extends Controller
         }
         Auth()->user()->profile->update(array_merge($data, ['photo' => $imageName]));
         //  Auth()->user()->profile->update($data);
+=======
+            'longitude' =>  'required',
+            'latitude' =>  'required',
+        ]);    
+
+        if ($request->hasFile('photo')){
+            $image_path = public_path("/photoProfile/".$user->profile->photo);
+            if (File::exists($image_path)) {
+                File::delete($image_path);
+            }
+            $bannerImage = $request->file('photo');
+            $imgName = $bannerImage->getClientOriginalName();
+            $destinationPath = public_path('/photoProfile/');
+            $bannerImage->move($destinationPath, $imgName);
+          } else {
+            $imgName = $user->profile->photo;
+          }
+          $user->profile->photo= $imgName;
+        Auth()->user()->profile->update(array_merge($data, ['photo' => $imgName]));
+        
+      
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
 
         
         $data = request()->validate([

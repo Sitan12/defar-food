@@ -63,7 +63,16 @@ class User extends Authenticatable
         return $this->hasOne('App\Models\Profile');
     }
 
+<<<<<<< HEAD
     public static function getAllUsers(){
         return User::all();
     }
+=======
+   
+    public static function getAllUsers(){
+        return User::all();
+    }
+
+   
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
 }

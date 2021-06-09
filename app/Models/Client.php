@@ -25,4 +25,13 @@ class Client extends Model
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+<<<<<<< HEAD
+=======
+
+    public function commande()
+    {
+        return $this->belongsTo('App\Models\Commande');
+    }
+    
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
 }

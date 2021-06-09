@@ -7,7 +7,11 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
         <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+<<<<<<< HEAD
 
+=======
+<link href="{{asset('css/style.css')}}" rel="stylesheet">
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
         <title>Defar Food</title>
 
         <!-- Fonts -->
@@ -26,24 +30,48 @@
     </head>
     <body class="antialiased ">
 <!-- ===========================NAVBAR======================== -->
+<<<<<<< HEAD
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
+=======
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container">
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
     <a class="navbar-brand" href="#">Defar-Food</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+<<<<<<< HEAD
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
     @if (Route::has('login'))
       <ul class="navbar-nav">
       @auth
         <li class="nav-item">
              <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+=======
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+    @if (Route::has('login'))
+      <ul class="navbar-nav">
+      <li class="nav-item">
+             <a href="{{route('apropos')}}" class="nav-link"> A propros</a>
+      </li> 
+      <li class="nav-item">
+             <a href="{{route('contact')}}" class="nav-link">Contactez-nous</a>
+        </li>
+      @auth
+        <li class="nav-item">
+             <a href="{{ url('/home') }}" class="nav-link">Mon compte</a>
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
         </li>    
          @else
         
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="login" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+<<<<<<< HEAD
             LOG IN
+=======
+            Se connecter
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
           </a>
           <ul class="dropdown-menu" aria-labelledby="login">
            
@@ -56,7 +84,11 @@
             
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="register" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+<<<<<<< HEAD
             REGISTER
+=======
+            S'inscrire
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
           </a>
           <ul class="dropdown-menu" aria-labelledby="register">
           @if (Route::has('register'))
@@ -67,13 +99,131 @@
             @endif
           </ul>
         </li>
+<<<<<<< HEAD
         <li class="offset-md-6"><a class="dropdown-item" href="{{ route('login') }}">LOG_ADMIN</a></li>
+=======
+        <!-- <li class="offset-md-6"><a class="dropdown-item" href="{{ route('login') }}">LOG_ADMIN</a></li> -->
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
         @endauth
       </ul>
       @endif
     </div>
   </div>
 </nav>
+<<<<<<< HEAD
            </div> 
     </body>
+=======
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{asset('photoPlat/im1.jpg')}}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Chez DefarFood, le plaisir du partage</h5>
+        
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{asset('photoPlat/im2.jpg')}}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Le gout de la saveur, Je l'aime et vous?</h5>
+       
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{{asset('photoPlat/im3.jpg')}}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Avec DefarFood, mangez a votre faim avec votre famille</h5>
+        
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+   
+<div class="container py-4">
+<h1 class="text-center py-4" style="text-decoration: underline; color:orangered; font-weight:bold; font-size:55px">Nos restaurants</h1>
+  <div class="row g-2">
+        @foreach ($restaurants as $restaurant)
+        <div class="col-md-3">
+          <div class="card" style="width: 18rem;">
+          @if($restaurant->photo!=null)
+            <img src="/photoProfile/{{ $restaurant->photo }}" class="card-img-top" alt="plat" height="50%" width="50%">
+          @else
+          <img src="{{asset('photoProfile/default.jpg')}}" class="card-img-top" alt="plat" height="195px" width="50%">
+          @endif
+            <div class="card-body">
+              <p class="card-text">{{$restaurant->description}}</p>
+              <p class="card-text"><span style="float:right; color:orangered">#{{$restaurant->user->name}}</span></p><br/>
+                <a href="{{route('plat.liste',$restaurant->user->id)}}" class="btn btn-primary">
+                {{ __('Voir nos plats') }}
+               </a>
+            </div>
+          </div>
+      </div>
+        @endforeach     
+  </div>
+</div>
+    </body>
+    <footer style="color: white" class="container-fluid bg-primary m-auto p-2 mt-4">
+    <div class="row container m-auto">
+      <div class="col-md-4 col-sm-4 col-lg-4 text-center col-auto ">
+        <a href="index.php" style=" font-weight:bold; font-size:30px">Defar Food</a>
+        <p class="p-4 text-center">Clients, partenaires, le rayonnement de nos références est le meilleur ambassadeur de notre savoir-faire !</p>
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-auto text-center">
+        <h3 class="text-uppercase"><strong>A propos</strong></h3> 
+        <p class="p-2">
+          <a class="text-white" href="index.php" style="text-decoration: none;">
+            Accueil
+          </a>
+        </p>
+        <p>
+          <a class="text-white" href="index.php#quiSommeNous" style="text-decoration: none;">
+          Qui sommes-nous?
+          </a>
+        </p>
+        <p>
+          <a class="text-white" href="produit.php#produit" style="text-decoration: none;">
+          Nos Restaurants
+          </a>
+        </p>   
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-auto" id="contact">
+        <h3 class="text-uppercase"><strong>Information !</strong></h3>
+        <p class="p-2">
+        Lieu&nbsp;:&nbsp;Parcelles Rue 52<br>
+        Mail&nbsp;:&nbsp;<a href="mailto:defarsci@gmail.com" class="text-white" style="text-decoration: none;">acsfroid@gmail.com</a><br>
+        Tel&nbsp;:&nbsp;33 800 22 93<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;77 500 22 18<br>
+        </p>
+        <h3 class="m-2 d-flex">
+          <a class="offset-1" href="https://www.facebook.com/Alliance-Customer-Service-104489741714876/" target="_blank">
+            <i class="fab fa-facebook-square" style="color: white"></i>
+          </a>
+          <a class="offset-1" href="https://www.instagram.com/p/CMUYhVfjNwY/?igshid=3qm1dxu22kqi" target="_blank">
+            <i class="fab fa-instagram-square" style="color: white"></i>
+          </a>
+           <a class="offset-1" href="mailto:acsfroid@gmail.com">
+            <button type="button" class="btn border border-1 border-primary bg-white" style="color: #354A9F; font-weight: bold">
+              Ecrivez-nous <i class="far fa-envelope"></i>
+            </button>
+          </a>
+        </h3>
+      </div>
+    </div>
+  </footer>
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
 </html>

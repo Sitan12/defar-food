@@ -32,6 +32,11 @@ class livreurController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+<<<<<<< HEAD
+=======
+            'longitude' =>  ['required'],
+            'latitude' =>  ['required'],
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
         ]);
     }
 
@@ -43,14 +48,27 @@ class livreurController extends Controller
             'role' => 'livreur',
             'is_admin' => 0,
             'password' => Hash::make($request['password']),
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
         ]);
 
          ProfileLivreur::create([
             'user_id' => $livreur->id,
+<<<<<<< HEAD
     
         ]);
 
         return $this->index();
+=======
+            'longitude' => $request->longitude,
+            'latitude' => $request->latitude,
+            //dd($request->longitude)
+        ]);
+
+        return redirect('login');
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
     }
 
     public function show($id)

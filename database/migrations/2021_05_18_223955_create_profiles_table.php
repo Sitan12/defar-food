@@ -18,6 +18,11 @@ class CreateProfilesTable extends Migration
             $table->string('adresse')->nullable();
             $table->string('numero')->nullable();
             $table->string('photo')->nullable();
+<<<<<<< HEAD
+=======
+            $table->string('longitude')->nullable();
+            $table->string('latitude')->nullable();
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
             $table->unsignedInteger('user_id')->index(); //definir la cle etrangere
             $table->timestamps();
         });

@@ -51,7 +51,11 @@
                                 @enderror
                             </div>
                         </div>
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
@@ -59,6 +63,10 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
+<<<<<<< HEAD
+=======
+                       
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
@@ -73,4 +81,9 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
 @endsection

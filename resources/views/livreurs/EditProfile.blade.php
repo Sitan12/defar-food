@@ -109,6 +109,41 @@
                                 @enderror
                             </div>
                         </div>
+<<<<<<< HEAD
+=======
+                        <div class="form-group row">
+                            <div class="col-md-5">
+                            <label for="password" class="">{{ __('Longitude') }}</label>
+
+                                <input id="longitude" type="text" class="form-control @error('longitude') is-invalid @enderror" name="longitude" value="{{ old('longitude') ?? $profile->longitude }}">
+
+                                @error('longitude')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+
+                            <div class="col-md-5 ">
+                                <label for="password" class="">{{ __('Latitude') }}</label>
+
+                                <input id="latitude" type="text" class="form-control @error('latitude') is-invalid @enderror" name="latitude" value="{{ old('latitude') ?? $profile->latitude }}">
+
+                                    @error('latitude')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+
+                            </div>
+
+                            <div class="col-md-2 py-4">
+                                <a  class="btn btn-success" id="location" class="btn btn-primary">
+                                <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
 
                         <div class="form-group row">
                             <label for="transport" class="col-md-4 col-form-label text-md-right">{{ __('Moyen de Transport') }}</label>
@@ -129,6 +164,23 @@
                             </div>
                         </div>
 
+<<<<<<< HEAD
+=======
+                        <div class="form-group row">
+                            <div class="col-md-8 offset-md-2 justify-content-center custom-file">
+
+                                <input id="validatedCustomFile" type="file" class="custom-file-input @error('photo') is-invalid @enderror" name="photo" value="{{ old('photo') ?? $profile->photo  }}" >
+                                <label for="validatedCustomFile" class="custom-file-label">{{ __('Choisir une Photo pour votre profile') }}</label>
+                                @error('photo')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                             
+                            </div>
+                        </div>
+
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
                     @endif
                      @endforeach
                        
@@ -146,4 +198,27 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
+=======
+<script>
+    $(document).ready(function(){
+    let button = document.getElementById("location");
+    let latText = document.getElementById("latitude");
+    let longText = document.getElementById("longitude");
+​
+    button.addEventListener("click", function() {
+        navigator.geolocation.getCurrentPosition(function(position) {
+        let lat = position.coords.latitude;
+        let long = position.coords.longitude;
+​
+            latText.value = lat;
+            longText.value = long;
+                // event.preventDefault();
+        });
+        });
+​
+        });
+    </script>
+
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
 @endsection

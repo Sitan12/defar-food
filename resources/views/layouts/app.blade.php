@@ -16,6 +16,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+<<<<<<< HEAD
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -27,6 +28,28 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+=======
+    <script src="{{ asset('js/main.js') }}" defer></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script defer src="https://maps.googleapis.com/maps/api/js?libraries=places&language=fr&key=AIzaSyCLW9Bqil_qNREpsU2HUjg1-5B_IQJxsrc" type="text/javascript"></script> -->
+    
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="{{asset('font-awesome-4.7.0/css/font-awesome.min.css')}}" rel="stylesheet"> 
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+
+    @notify_css
+</head>
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-md navbar-light bg-primary shadow-sm">
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -38,15 +61,33 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+<<<<<<< HEAD
 
+=======
+                       
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
                     </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+<<<<<<< HEAD
                         <!-- Authentication Links -->
                         @guest
                             @if(Route::has('login'))
                                 <li class="nav-item">
+=======
+                        <li class="nav-item">
+                            <a href="{{route('apropos')}}" class="nav-link"> A propros</a>
+                        </li> 
+                        <li class="nav-item">
+                            <a href="{{route('contact')}}" class="nav-link">Contactez-nous</a>
+                        </li>
+                        <!-- Authentication Links -->
+
+                        @guest
+                            @if(Route::has('login'))
+                                <li class="nav-item dropdown">
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                                 </li>
                             @endif
@@ -63,7 +104,21 @@
                                 </ul>
                             </li>
                                 @endif 
+<<<<<<< HEAD
                         @else
+=======
+                                 
+                        @else
+                        @if( Auth::user()->role == "client" )
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('panier')}}"><i class="fa fa-cart-plus" aria-hidden="true"></i>
+                                
+                                    {{count($com)}}
+                               
+                                </a>
+                            </li>
+                          @endif
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
@@ -74,7 +129,11 @@
                                 <a class="dropdown-item" href="{{ route('profiles.show', Auth::user()->name) }}">
                                         {{ __('Mon Profile') }}
                                     </a>
+<<<<<<< HEAD
                                     @endif
+=======
+                                @endif
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
                 
                                     @if( Auth::user()->role == "restaurant" )
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -82,6 +141,10 @@
                                 <a class="dropdown-item" href="{{ route('restaurant.profile', Auth::user()->name) }}">
                                         {{ __('Mon Profile') }}
                                     </a>
+<<<<<<< HEAD
+=======
+                                    
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
                                     @endif
                                     @if( Auth::user()->role == "livreur" )
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -114,4 +177,10 @@
         </main>
     </div>
 </body>
+<<<<<<< HEAD
+=======
+
+@notify_js
+@notify_render
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
 </html>

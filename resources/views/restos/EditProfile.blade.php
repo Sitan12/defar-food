@@ -98,6 +98,68 @@
                             </div>
                         </div>
 
+<<<<<<< HEAD
+=======
+                        <div class="form-group row">
+                            <div class="col-md-8 offset-md-2 justify-content-center custom-file">
+
+                                <input id="validatedCustomFile" type="file" class="custom-file-input @error('photo') is-invalid @enderror" name="photo" value="{{ old('photo') ?? $profile->photo  }}" >
+                                <label for="validatedCustomFile" class="custom-file-label">{{ __('Choisir une Photo pour votre profile') }}</label>
+                                @error('photo')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                             
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-8 offset-md-2 justify-content-center">
+
+                            <label for="description " class="form-label">Description <span class="text-danger">*</span></label>
+                            <textarea name="description" placeholder="Description..." class="form-control @error('title') is-invalid @enderror" rows="10">{{ old('description') ?? $profile->description  }}</textarea>
+                                @error('description')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                             
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-5">
+                            <label for="password" class="">{{ __('Longitude') }}</label>
+
+                                <input id="longitude" type="text" class="form-control @error('longitude') is-invalid @enderror" name="longitude" value="{{ old('longitude') ?? $profile->longitude }}">
+
+                                @error('longitude')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+
+                            <div class="col-md-5 ">
+                                <label for="password" class="">{{ __('Latitude') }}</label>
+
+                                <input id="latitude" type="text" class="form-control @error('latitude') is-invalid @enderror" name="latitude" value="{{ old('latitude') ?? $profile->latitude }}">
+
+                                    @error('latitude')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+
+                            </div>
+
+                            <div class="col-md-2 py-4">
+                                <a  class="btn btn-success" id="btnLocalisation" class="btn btn-primary">
+                                <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
                         @endif 
                     @endforeach  
                         <div class="form-group row mb-0">
@@ -113,4 +175,27 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
+=======
+<script>
+$(document).ready(function(){
+    var button = document.getElementById('btnLocalisation');
+    var latitude = document.getElementById('latitude');
+    var longitude = document.getElementById('longitude');
+
+    button.addEventListener('click', function(){
+        navigator.geolocation.getCurrentPosition(function(pos){
+            let lat = pos.coords.latitude;
+            let long = pos.coords.longitude;
+
+            latitude.value = lat;
+            longitude.value = long
+        });  
+    });
+    });
+
+
+
+</script>
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
 @endsection

@@ -9,9 +9,17 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+<<<<<<< HEAD
         "intervention/image": "^2.5",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5"
+=======
+        "hardevine/shoppingcart": "^3.0",
+        "intervention/image": "^2.5",
+        "laravel/framework": "^8.12",
+        "laravel/tinker": "^2.5",
+        "yoeunes/notify": "^1.0"
+>>>>>>> 5cc7f2269f7c869858743f706e3ce78f83fb0bae
     },
     "require-dev": {
         "facade/ignition": "^2.5",
